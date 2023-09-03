@@ -5,7 +5,7 @@ import '../styles/aboutMe.css';
 const AboutMe:React.FC = () => {
     return (
       <Container className="about-me-container">
-         <Image src='/img/aboutme.jpg' alt="me" className="photo"/>
+         <Image src={`${process.env.PUBLIC_URL}/img/aboutme.jpg`}  alt="me" className="photo"/>
          <div className="style-content"> 
             <h2 className="text-primary">About Me</h2>
             <p>Hi, I'm Ionut Ciornei! I'm transitioning from a career as a driver to pursue my passion for Front-End Development.</p>

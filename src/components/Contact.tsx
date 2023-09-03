@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateField, resetForm, ContactState } from '../features/contactSlice';
 import { RootState } from '../app/store';  // Replace with your actual RootState
-import { Container } from 'react-bootstrap';
+import { Button, Container, Alert } from 'react-bootstrap';
 
 const Contact: React.FC = () => {
   const dispatch = useDispatch();
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean>(false);
+
   const formData = useSelector((state: RootState) => state.contact);  // Replace 'state.contact' based on your actual state structure
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -17,12 +20,16 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/sendEmail', formData);
+      const response = await axios.post('https://sheltered-forest-33596.herokuapp.com/api/sendEmail', formData);
       if (response.data === 'Email sent') {
+        setSuccess(true);
+        setError(null);
         console.log('Email successfully sent');
         dispatch(resetForm());
       }
     } catch (error) {
+      setError('There was an error sending the email');
+      setSuccess(false);
       console.error('There was an error sending the email', error);
     }
   };
@@ -30,6 +37,8 @@ const Contact: React.FC = () => {
   return (
     <Container>
       <h1 className='text-center text-primary'>Contact Me</h1>
+      {error && <Alert variant="danger">{error}</Alert>}
+      {success && <Alert variant="success">Email successfully sent!</Alert>}
       <form onSubmit={handleSubmit}>
         <div>
           <input 
@@ -47,7 +56,7 @@ const Contact: React.FC = () => {
             type="email" 
             id="email" 
             name="email"
-            placeholder='email' 
+            placeholder='Email' 
             className='mb-2'
             value={formData.email} 
             onChange={handleInputChange} 
@@ -62,9 +71,9 @@ const Contact: React.FC = () => {
             onChange={handleInputChange} 
           ></textarea>
         </div>
-        <button type="submit">Send Message</button>
+        <Button variant='primary' type="submit">Send Message</Button>
       </form>
-      </Container>
+    </Container>
   );
 };
 

@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}> {/* Wrap your application in the Redux Provider */}
-      <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
         <App />
       </BrowserRouter>
     </Provider>

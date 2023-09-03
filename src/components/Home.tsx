@@ -12,7 +12,7 @@ const Home:React.FC = () => {
                     <div className='style'>
                         <p>I'm on a mission to create intuitive and dynamic user experiences.</p>
                         {/* CTA Button */}
-                        <Link to="/portfolio">  {/* Adjust the link as needed */}
+                        <Link to="/projects">  {/* Adjust the link as needed */}
                             <Button variant="primary" className="ms-3">
                                 Portofolio
                             </Button>
@@ -24,7 +24,7 @@ const Home:React.FC = () => {
                         </Link>
                     </div>
                 </article>
-                <Image src="/img/me (2).jpg" alt="me" className='imgStyle' aria-label="Picture of me"/>
+                <Image src={`${process.env.PUBLIC_URL}/img/me (2).jpg`} alt="me" className='imgStyle' aria-label="Picture of me"/> 
             </section>
         </Container>
     )

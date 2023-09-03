@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 const Portofolio: React.FC = () => {
   return (
     <>
-      <h2 className="text-center text-primary mb-5">Last Project</h2> {/* Here's the title outside of the Card */}
+      <h2 className="text-center text-primary mb-5">Last Project</h2>
       <Card className='cardStyle'>
-        <Card.Img variant="top" src="/img/ecommerce.jpg" />
+        <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/ecommerce.jpg`} /> ecommerce.jpg
         <Card.Body>
           <Card.Title className='text-center'>E-Commerce Website</Card.Title>
           <Card.Text>
