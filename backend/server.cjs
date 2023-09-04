@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const path = require('path');  // Adăugare pentru a servi React app
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-// Verifică dacă variabilele de mediu sunt setate
 if (!process.env.EMAIL || !process.env.PASSWORD) {
     console.error("EMAIL and PASSWORD environment variables must be set!");
     process.exit(1);
@@ -19,11 +19,27 @@ app.use(express.json());
 
 // Configurează CORS
 const corsOptions = {
-  origin: 'https://ionut1oo.github.io',
-  methods: "GET,HEAD,POST",
+  origin: process.env.CORS_ORIGIN || 'https://ionut1oo.github.io',
+  methods: "GET,HEAD,POST,OPTIONS",
+  optionsSuccessStatus: 204,
+  allowedHeaders: ['Content-Type']
 };
 
 app.use(cors(corsOptions));
+
+// Middleware pentru diagnosticarea problemelor CORS
+app.use((req, res, next) => {
+  console.log('CORS Headers:', res.getHeaders());
+  console.log('Request Origin:', req.get('origin'));
+  console.log('Request Method:', req.method);
+  console.log('Request Headers:', req.headers);
+  next();
+});
+
+app.options('*', cors(corsOptions));
+
+// Servește fișierele statice din aplicația React
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Adaugă o rută GET pentru "/"
 app.get('/', (req, res) => {
@@ -32,8 +48,11 @@ app.get('/', (req, res) => {
 
 // Codul pentru trimitere email
 app.post("/api/sendEmail", async (req, res) => {
-  console.log("Request received:", req.body);
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).send('All fields are required');
+  }
 
   let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -53,13 +72,17 @@ app.post("/api/sendEmail", async (req, res) => {
     });
 
     console.log("Email sent successfully");
-    console.log("Email:", process.env.EMAIL, "Password:", process.env.PASSWORD);
     res.send("Email sent");
 
   } catch (error) {
     console.error("Error sending email: ", error);
     res.status(500).send(`Internal Server Error: ${error.message}`);
   }
+});
+
+// Ruta catch-all pentru a servi aplicația React
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 app.listen(port, () => {

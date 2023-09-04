@@ -1,0 +1,47 @@
+/* Animations */
+@keyframes photoAnimation {
+    0% {
+        transform: skew(0);
+    }
+    50% {
+        transform: skew(15deg, 15deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
+/* General styles */
+.about-me-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between; /* Horizontal spacing */
+    flex-wrap: wrap; /* Allow items to wrap */
+    padding: 2rem 0; /* Padding for better spacing */
+}
+
+.photo {
+    height: 300px;
+    width: 300px;
+    box-shadow: 3px 3px lightblue, -1em 0 .4em teal;
+    animation: photoAnimation 1.5s ease 1;
+    margin-right: 2rem; /* Space between image and text */
+}
+
+.style-content {
+    max-width: 60%; /* Limit width to 60% of container */
+    animation: photoAnimation 1.5s ease 1;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    .style-content {
+        max-width: 100%; /* Take full width on mobile */
+        margin-top: 1rem; /* Space between image and text */
+    }
+    .photo {
+        width: 80%; /* Larger image on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center image */
+    }
+}
