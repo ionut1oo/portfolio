@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 app.options('*', cors(corsOptions));
 
 // Servește fișierele statice din aplicația React
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Adaugă o rută GET pentru "/"
 app.get('/', (req, res) => {
