@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const path = require('path');  // Adăugare pentru a servi React app
+const path = require('path');
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
@@ -25,6 +25,7 @@ const corsOptions = {
   allowedHeaders: ['Content-Type']
 };
 
+// Adăugat pentru a permite CORS
 app.use(cors(corsOptions));
 
 // Middleware pentru diagnosticarea problemelor CORS
@@ -36,9 +37,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.options('*', cors(corsOptions));
-
 // Servește fișierele statice din aplicația React
+
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Adaugă o rută GET pentru "/"
@@ -48,6 +48,7 @@ app.get('/', (req, res) => {
 
 // Codul pentru trimitere email
 app.post("/api/sendEmail", async (req, res) => {
+  console.log(req.body);
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -82,7 +83,9 @@ app.post("/api/sendEmail", async (req, res) => {
 
 // Ruta catch-all pentru a servi aplicația React
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  console.log("Serving file from: ", path.join(__dirname, '../client/build/index.html'));
+
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 app.listen(port, () => {
