@@ -3,6 +3,8 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require('path');
 
+console.log("Directory:", __dirname);
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
@@ -39,7 +41,7 @@ app.use((req, res, next) => {
 
 // Servește fișierele statice din aplicația React
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Adaugă o rută GET pentru "/"
 app.get('/', (req, res) => {
@@ -83,9 +85,7 @@ app.post("/api/sendEmail", async (req, res) => {
 
 // Ruta catch-all pentru a servi aplicația React
 app.get('*', (req, res) => {
-  console.log("Serving file from: ", path.join(__dirname, '../client/build/index.html'));
-
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));    
 });
 
 app.listen(port, () => {
