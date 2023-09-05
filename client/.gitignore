@@ -4,3 +4,6 @@ client/node_modules/
 
 # Ignoră fișierul de mediu
 backend/.env
+
+backend/node_modules/
+client/node_modules/
