@@ -27,13 +27,22 @@ app.use((req, res, next) => {
 });
 
 // Configure and Enable CORS
+const whitelist = ['http://localhost:3000', 'https://ionut1oo.github.io'];
+
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || 'https://ionut1oo.github.io',
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
   optionsSuccessStatus: 204,
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 
 // Serve static files from the React app
