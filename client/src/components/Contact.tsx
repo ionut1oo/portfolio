@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateField, resetForm, ContactState } from '../features/contactSlice';
-import { RootState } from '../app/store';  // Replace with your actual RootState
+import { RootState } from '../app/store';  
 import { Button, Container, Alert } from 'react-bootstrap';
 
 const Contact: React.FC = () => {
@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
 
-  const formData = useSelector((state: RootState) => state.contact);  // Replace 'state.contact' based on your actual state structure
+  const formData = useSelector((state: RootState) => state.contact);  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -24,7 +24,10 @@ const Contact: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        withCredentials: true,
       });
+      
+      
       if (response.status >= 200 && response.status < 300 && response.data === 'Email sent') {
         setSuccess(true);
         setError(null);
