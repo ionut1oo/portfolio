@@ -54,7 +54,8 @@ const Contact: React.FC = () => {
             type="text" 
             id="name" 
             name="name"
-            placeholder='Name' 
+            placeholder='Name'
+            autoComplete='name'
             className='mb-2 mt-5'
             value={formData.name} 
             onChange={handleInputChange} 
@@ -65,7 +66,8 @@ const Contact: React.FC = () => {
             type="email" 
             id="email" 
             name="email"
-            placeholder='Email' 
+            placeholder='Email'
+            autoComplete='email' 
             className='mb-2'
             value={formData.email} 
             onChange={handleInputChange} 
@@ -76,6 +78,7 @@ const Contact: React.FC = () => {
             id="message" 
             name="message" 
             placeholder='Message'
+            autoComplete='on'
             value={formData.message} 
             onChange={handleInputChange} 
           ></textarea>
