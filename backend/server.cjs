@@ -24,7 +24,9 @@ const corsOptions = {
   origin: process.env.CORS_ORIGIN || 'https://ionut1oo.github.io',
   methods: "GET,HEAD,POST,OPTIONS",
   optionsSuccessStatus: 204,
-  allowedHeaders: ['Content-Type']
+  allowedHeaders: ['Content-Type'],
+  credentials: true,  // permite cookies
+  preflightContinue: true  // permite cererile preflight
 };
 
 // Adăugat pentru a permite CORS
