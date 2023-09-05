@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 
 // Configure and Enable CORS
-const whitelist = ['http://localhost:3000', 'https://ionut1oo.github.io'];
+const whitelist = ['http://localhost:3000', 'https://ionut1oo.github.io', 'https://ionut1oo.github.io/portfolio/'];
 
 const corsOptions = {
   origin: function (origin, callback) {
