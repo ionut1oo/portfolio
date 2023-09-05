@@ -45,6 +45,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// Initialize nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD
+  }
+});
+
 // Serve static files from the React app
 const buildPath = path.join(__dirname, 'client/build');
 if (path.resolve(__dirname, buildPath)) {
@@ -61,7 +70,27 @@ app.get('/', (req, res) => {
 
 // Code for sending an email
 app.post("/api/sendEmail", async (req, res) => {
-  // Your email-sending code here
+  try {
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: req.body.email,
+      subject: 'Contact Form Message',
+      text: req.body.message
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        res.status(500).send('error');
+      } else {
+        console.log('Email sent: ' + info.response);
+        res.status(200).send('Success');
+      }
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Catch-all route to serve the React app
