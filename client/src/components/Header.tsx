@@ -7,12 +7,13 @@ const Header: React.FC = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-      <Navbar.Brand to='/portfolio/home' as={NavLink} className='Nav-link'>&lt;Ionut &#47;&#62;</Navbar.Brand>
+      <Navbar.Brand>&lt;Ionut &#47;&#62;</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>
           <Nav>
+          <Nav.Link to='/home' as={NavLink} className='Nav-link'>Home</Nav.Link>
             <Nav.Link to='/about-me' as={NavLink} className='Nav-link'>About Me</Nav.Link>
             {/* <Nav.Link to='/skills' as={NavLink}>Skills</Nav.Link>
             <Nav.Link to='/qualification' as={NavLink}>Qualification</Nav.Link> */}
