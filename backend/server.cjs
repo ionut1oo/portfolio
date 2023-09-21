@@ -3,13 +3,13 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require('path');
 
-// Environment Config
+// Configurare de mediu
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
 if (!process.env.EMAIL || !process.env.PASSWORD) {
-  console.error("EMAIL and PASSWORD environment variables must be set!");
+  console.error("Variabilele de mediu EMAIL și PASSWORD trebuie setate!");
   process.exit(1);
 }
 
@@ -18,15 +18,7 @@ const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-// Logging Middleware for Debugging CORS
-app.use((req, res, next) => {
-  console.log('Request Origin:', req.get('origin'));
-  console.log('Request Method:', req.method);
-  console.log('Request Headers:', req.headers);
-  next();
-});
-
-// Configure and Enable CORS
+// Configurare și activare CORS
 const whitelist = ['http://localhost:3000', 'https://ionut1oo.github.io', 'https://ionut1oo.github.io/portfolio/'];
 
 const corsOptions = {
@@ -34,7 +26,7 @@ const corsOptions = {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error('Nu este permis de CORS'));
     }
   },
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
@@ -45,7 +37,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Initialize nodemailer transporter
+// Middleware de logare pentru depanarea CORS
+app.use((req, res, next) => {
+  console.log('Originea cererii:', req.get('origin'));
+  console.log('Metoda cererii:', req.method);
+  console.log('Antetele cererii:', req.headers);
+  next();
+});
+
+// Inițializare transporter nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -54,27 +54,27 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Serve static files from the React app
+// Servirea fișierelor statice din aplicația React
 const buildPath = path.join(__dirname, 'client/build');
 if (path.resolve(__dirname, buildPath)) {
   app.use(express.static(buildPath));
 } else {
-  console.error(`The directory ${buildPath} does not exist!`);
+  console.error(`Directorul ${buildPath} nu există!`);
   process.exit(1);
 }
 
-// Add a GET route for "/"
+// Adăugare rută GET pentru "/"
 app.get('/', (req, res) => {
-  res.send('Server is functional.');
+  res.send('Serverul este funcțional.');
 });
 
-// Code for sending an email
+// Cod pentru trimiterea unui email
 app.post("/api/sendEmail", async (req, res) => {
   try {
     const mailOptions = {
       from: process.env.EMAIL,
       to: req.body.email,
-      subject: 'Contact Form Message',
+      subject: 'Mesaj de pe formularul de contact',
       text: req.body.message
     };
 
@@ -83,27 +83,27 @@ app.post("/api/sendEmail", async (req, res) => {
         console.log(error);
         res.status(500).send('error');
       } else {
-        console.log('Email sent: ' + info.response);
-        res.status(200).send('Success');
+        console.log('Email trimis: ' + info.response);
+        res.status(200).send('Succes');
       }
     });
   } catch (error) {
     console.log(error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Eroare internă de server');
   }
 });
 
-// Catch-all route to serve the React app
+// Rută de tip catch-all pentru servirea aplicației React
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-// Error-handling middleware
+// Middleware pentru gestionarea erorilor
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send('Ceva nu a funcționat!');
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Serverul rulează pe portul ${port}`);
 });

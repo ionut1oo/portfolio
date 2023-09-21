@@ -1,9 +1,1 @@
-# Ignoră folderul node_modules
-backend/node_modules/
-client/node_modules/
-
-# Ignoră fișierul de mediu
-backend/.env
-
 node_modules/
-
