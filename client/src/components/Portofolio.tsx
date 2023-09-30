@@ -10,11 +10,11 @@ const Portofolio: React.FC = () => {
     <>
       <h2 className="text-center text-primary mb-5">Last Project</h2>
       <Card className='cardStyle'>
-        <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/ecommerce.jpg`} /> ecommerce.jpg
+        <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/ecommerce.jpg`} /> 
         <Card.Body>
           <Card.Title className='text-center'>Shop-On</Card.Title>
           <Card.Text>
-            Shop-On Website created for laptop buyers
+            E-Commerce Website created for laptop buyers
           </Card.Text>
           <Link to="https://github.com/ionut1oo/ionut1oo.github.io/">
              <Button variant="primary ms-5"><BsGithub/></Button>
