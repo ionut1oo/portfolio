@@ -14,7 +14,7 @@ const Portofolio: React.FC = () => {
         <Card.Body>
           <Card.Title className='text-center'>Shop-On</Card.Title>
           <Card.Text>
-            E-Commerce Website created for laptop buyers
+            E-Commerce Website created for laptops buyers
           </Card.Text>
           <Link to="https://github.com/ionut1oo/ionut1oo.github.io/">
              <Button variant="primary ms-5"><BsGithub/></Button>
