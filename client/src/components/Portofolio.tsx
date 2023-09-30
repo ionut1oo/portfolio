@@ -12,7 +12,7 @@ const Portofolio: React.FC = () => {
       <Card className='cardStyle'>
         <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/img/ecommerce.jpg`} /> ecommerce.jpg
         <Card.Body>
-          <Card.Title className='text-center'>E-Commerce Website</Card.Title>
+          <Card.Title className='text-center'>Shop-On</Card.Title>
           <Card.Text>
             Shop-On Website created for laptop buyers
           </Card.Text>
