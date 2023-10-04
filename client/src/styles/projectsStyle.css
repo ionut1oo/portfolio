@@ -4,13 +4,14 @@
 
 .blog-card {
     display: inline-block;
+    position: relative;
     bottom: 360px;
     left: 350px;
 }
 
 @media screen and (max-width: 480px) {
     .blog-card {
-        bottom: 0;
+        top: 15px;
         left: 0;
     }
     
