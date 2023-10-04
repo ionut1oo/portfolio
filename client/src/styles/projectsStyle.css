@@ -1,4 +1,17 @@
-
-.cardStyle {
+.cardStyle, .blog-card {
     width: 18rem;
+}
+
+.blog-card {
+    display: inline-block;
+    bottom: 360px;
+    left: 350px;
+}
+
+@media screen and (max-width: 480px) {
+    .blog-card {
+        bottom: 0;
+        left: 0;
+    }
+    
 }

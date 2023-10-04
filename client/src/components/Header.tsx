@@ -13,12 +13,12 @@ const Header: React.FC = () => {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-          <Nav.Link to='/home' as={NavLink} className='Nav-link'>Home</Nav.Link>
-            <Nav.Link to='/about-me' as={NavLink} className='Nav-link'>About Me</Nav.Link>
+          <Nav.Link to='/home' as={NavLink} className='Nav-link'> Home </Nav.Link>
+            <Nav.Link to='/about-me' as={NavLink} className='Nav-link'> About Me </Nav.Link>
             {/* <Nav.Link to='/skills' as={NavLink}>Skills</Nav.Link>
             <Nav.Link to='/qualification' as={NavLink}>Qualification</Nav.Link> */}
-            <Nav.Link to='/projects' as={NavLink} className='Nav-link'>Portfolio</Nav.Link>
-            <Nav.Link to='/contact' as={NavLink} className='Nav-link'>Contact</Nav.Link>
+            <Nav.Link to='/projects' as={NavLink} className='Nav-link'> Portfolio </Nav.Link>
+            <Nav.Link to='/contact' as={NavLink} className='Nav-link'> Contact </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

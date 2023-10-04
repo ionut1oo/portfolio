@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
     <Container>
       <h1 className='text-center text-primary'>Contact Me</h1>
       {error && <Alert variant="danger">{error}</Alert>}
-      {success && <Alert variant="success">Email successfully sent!</Alert>}
+      {success && <Alert variant="success"> Email successfully sent! </Alert>}
       <form onSubmit={handleSubmit}>
         <div>
           <input 
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
             onChange={handleInputChange} 
           ></textarea>
         </div>
-        <Button variant='primary' type="submit">Send Message</Button>
+        <Button variant='primary' type="submit"> Send Message </Button>
       </form>
     </Container>
   );
