@@ -9,7 +9,7 @@ const AboutMe:React.FC = () => {
          <div className="style-content"> 
             <h2 className="text-primary"> About Me </h2>
             <p> Hi, I'm Ionut Ciornei! I'm transitioning from a career as a driver to pursue my passion for Front-End Development. </p>
-            <p> With skills in HTML, CSS, JavaScript, TypeScript, React, Boostrap and Git, I aim to create user experiences that are both intuitive and dynamic. </p>
+            <p> With skills in JavaScript, TypeScript, React, Redux.js, Git, Boostrap, CSS, HTML I aim to create user experiences that are both intuitive and dynamic. </p>
             <p> My background has instilled in me a keen attention to detail and a unique approach to problem-solving. </p>
             <p> I'm actively seeking opportunities to grow in this exciting new field. </p> 
          </div>
