@@ -39,6 +39,21 @@ const Portofolio: React.FC = () => {
           </Link>  
         </Card.Body>
       </Card>
+      <Card className='nails-card'>
+        <Card.Img variant="top" className='nails-image'  src={`${process.env.PUBLIC_URL}/img/nails.jpg`} />   
+        <Card.Body>
+          <Card.Title> Florentina Petrea Nails </Card.Title>
+          <Card.Text>
+            I made it this Website for my sister nails salon.
+          </Card.Text>
+          <Link to="https://github.com/ionut1oo/florentina-petrea-nails">
+            <Button variant="primary ms-5"><BsGithub/></Button> 
+          </Link>
+          <Link to="https://ionut1oo.github.io/florentina-petrea-nails/"> 
+             <Button variant="primary" className='ms-2'><GrOverview /></Button>
+          </Link>  
+        </Card.Body>
+      </Card>
     </>
   );
 }

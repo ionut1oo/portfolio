@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import '../styles/header.css';  // Import the CSS
+import '../styles/header.css';  
 
 const Header: React.FC = () => {
   return (

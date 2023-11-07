@@ -1,0 +1,10 @@
+input, textarea, .contact-button {
+    border-radius: 5px;
+}
+
+.contact-button {
+    height: 3rem;
+    width: 5rem;
+    color: white;
+    background-color: #3B71CA;
+}

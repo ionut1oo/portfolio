@@ -1,18 +1,38 @@
-.cardStyle, .blog-card {
+.cardStyle, .blog-card{
     width: 18rem;
 }
 
-.blog-card {
+.blog-card, .nails-card  {
     display: inline-block;
     position: relative;
-    bottom: 360px;
-    left: 350px;
+
+}
+
+.blog-card {
+    left: 25rem;
+    bottom: 22.5rem;
+}
+
+.nails-card {
+    width: 17.5rem;
+    left: 50rem;
+    bottom: 45.3rem;
+}
+
+.nails-image {
+    height: 12.3rem;
 }
 
 @media screen and (max-width: 480px) {
-    .blog-card {
-        top: 15px;
+    .blog-card, .nails-card {
         left: 0;
     }
-    
+
+    .blog-card {
+       top: 15px;
+    }
+
+    .nails-card {
+        top: 45px;
+    }
 }
