@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://ionut1oo.github.io/portfolio/",
-  "proxy": "https://sheltered-forest-33596.herokuapp.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",

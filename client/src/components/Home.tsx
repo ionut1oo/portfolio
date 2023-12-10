@@ -1,32 +1,35 @@
 import React from 'react';
-import { Button, Container, Image } from 'react-bootstrap';
 import '../styles/home.css';
-import { Link } from 'react-router-dom'; 
+import { FaLinkedin, FaGithub, FaFacebook  } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-const Home:React.FC = () => {
-    return (
-        <Container className='mt-5 container' fluid>
-            <section className='content-wrapper'>
-                <article className='text-section'>
-                    <h1 className='header text-primary'> Hi! I'm Ionut Ciornei </h1>
-                    <div className='style'>
-                        <p> I'm on a mission to create intuitive and dynamic user experiences. </p>
-                        <Link to="/projects"> 
-                            <Button variant="primary" className="ms-3">
-                                Portofolio
-                            </Button>
-                        </Link>
-                        <Link to="/contact">
-                        <Button variant="primary" className="ms-3">
-                                Contact Me
-                            </Button>
-                        </Link>
-                    </div>
-                </article>
-                <Image src={`${process.env.PUBLIC_URL}/img/me.jpg`} alt="me" className='imgStyle' aria-label="Picture of me"/> 
-            </section>
-        </Container>
-    )
+const Home = () => {
+  return (
+    <div className='home-container'>
+      <div className='business-card'>
+      <h1 className='role'>Junior Frontend Developer</h1>
+      <hr />
+      <p className='my-name'>Ciornei Ionut</p>
+      <p>(+40) 759 478 325</p>
+      <p>ciorneiionut94@gmail.com</p>
+      <div className='social-contact'>
+        <Link  to='https://www.linkedin.com/in/ionut-ciornei/' 
+        target='_blank'  className='social-icons'>
+          <FaLinkedin />
+        </Link>
+        <Link to='https://github.com/ionut1oo'
+        target='_blank' className='social-icons'>
+          <FaGithub />
+        </Link>
+        <Link to='https://www.facebook.com/ionut.ciornei.96'
+        target='_blank' className='social-icons'>
+          <FaFacebook />
+        </Link>
+      </div>
+      </div>
+      <img className='me-photo' src='imgs/me.png' alt="me" />
+    </div>
+  );
 };
 
 export default Home;

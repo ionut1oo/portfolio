@@ -1,24 +1,31 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import '../styles/contact.css';
 
 
 const Contact= () => {
     return (
-        <Container>
-            <h3 className='mt-5 text-primary'> <strong> Contact Me </strong> </h3>
-            <form action="https://formsubmit.co/a9b4085d9d3877c4e9448f77a3f4cc8c" method="POST">
-                <label htmlFor="firstName" className='mt-3'> First name </label>
-                <input className='d-block ' id='firstName' type='text'/>
-                <label htmlFor="lastName"> Last name </label>
-                <input className='d-block ' type='text' name='lastName'/>
-                <label htmlFor="email"> Email </label>
-                <input className='d-block' type='email' name='name'/>
-                <label className='d-block ' htmlFor="email" > Message </label>
-                <textarea name="message" cols={30} rows={5} required ></textarea>
-                <button type='submit' className='d-block contact-button '> Send </button>
+        <div className='contact-container'>
+            <form action="https://formsubmit.co/a9b4085d9d3877c4e9448f77a3f4cc8c"
+            method="POST"  target="_blank" className='contact-form'>
+                <h2 className='contact-title'>Contact</h2>
+                <fieldset>
+                    <label htmlFor="name">Name</label>
+                    <input  id='name' type='text'/>
+                    <label htmlFor="email">Email</label>
+                    <input type='email' />
+                    <label className='d-block ' htmlFor="email" >Message</label>
+                    <textarea cols={30} rows={12} required ></textarea>
+                    <button type='submit' className='contact-button '>Send</button>
+                </fieldset>
             </form>
-        </Container>
+            <div className='contact-info'>
+                <h3 className='info-title'>Contact Info</h3>
+                <p className='info'>Name: Ionut Ciornei</p>
+                <p className='info'>Phone Number: (+40) 759 478 325</p>
+                <p className='info'>Email: ciorneiionut94@gmail.com</p>
+            </div>
+       
+        </div>
     )
 }
 

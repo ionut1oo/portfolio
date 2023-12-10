@@ -1,23 +1,25 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { Container } from 'react-bootstrap'; 
-import Header from './Header';
+import { Route, Routes} from 'react-router-dom';
+import Navbar from './Navbar';
 import Home from './Home';
-import AboutMe from './AboutMe';
-import Portofolio from './Portofolio';
+import About from './About';
+import Projects from './Projects';
 import Contact from './Contact';
+import Skills from './Skills';
+import Main from './Main';
 
 const App = () => {
   return (
-    <Container fluid>
-      <Header />
+    <div>
+      <Navbar />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/projects" element={<Portofolio />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/" element={<Navigate to="/home" />} /> 
-      </Routes>  
-    </Container>
+        <Route path="/" element={<Main />} /> 
+      </Routes>
+    </div>
   );
 };
 
