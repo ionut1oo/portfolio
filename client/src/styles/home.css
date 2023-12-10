@@ -98,6 +98,10 @@
         justify-items: center;
         align-items: center;
     }
+    
+    .role {
+        font-size: 19px;
+    }
 
     .me-photo { 
         height: 13rem; 
@@ -105,10 +109,8 @@
     }
 
     .business-card {
-        grid-template-columns: 19rem;
         margin: 0 auto;
     }
-
 
 }
 
@@ -116,30 +118,28 @@
 @media screen and (max-width: 25em) {
     .me-photo { 
         height: 10rem; 
-        margin: 0 auto;
+        margin: 0 3rem;
     }
 
     .business-card {
-        grid-template-columns: 16rem;
-        margin: 0 auto;
+        grid-template-columns: 18rem;
+        margin: 0;
         overflow: hidden;
     }
 
-    .role {
-        font-size: 21px;
-    }
 }
 
 
 @media screen and (max-width: 20em) {
     .business-card {
-        grid-template-columns: 11rem;
+        grid-template-columns: 15rem;
         grid-template-rows: 1rem;
         margin-left: 0.1rem;
     }
 
     .me-photo { 
-        height: 6rem;
+        height: 11rem;
+        margin: 0;
     }
     .role {
         font-size: 15px;
@@ -148,7 +148,7 @@
 
 @media screen and (max-width: 15em) {
     .business-card {
-        margin-right: 3rem;
+        margin-left: 1rem;
     }
 
 }

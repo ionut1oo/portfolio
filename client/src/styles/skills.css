@@ -81,6 +81,11 @@ dd {
 
 
 @media screen and (max-width: 35rem) {
+    .skills-title {
+        font-size: 1.4rem;
+        padding: 4rem 2rem;
+    }
+
     .cards {
         grid-template-columns: auto;
         grid-template-rows: repeat(4, 20rem);

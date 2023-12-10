@@ -52,6 +52,10 @@
 }
 
 @media screen and (max-width: 35em) {
+    .about-title {
+        font-size: 1.4rem;
+    }
+
     .about-container {
         grid-template-columns: auto;
         justify-items: center;
@@ -63,6 +67,7 @@
 
     .description {
         width: 22rem;
+        margin: 0 2rem;
     }
 
 }
