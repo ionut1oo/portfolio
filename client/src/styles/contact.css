@@ -53,7 +53,7 @@
     background-color: #007bff;
     color: #000;
     inset: 1;
-    width: 17rem;
+    width: 19rem;
     letter-spacing: 0.7px;
     line-height: 1.5;
     border-radius: 5px;
@@ -77,9 +77,6 @@
         width: 25rem; 
     }
 
-    .contact-info {
-        width: 17rem;
-    }
 
 }
 
@@ -99,7 +96,7 @@
         }
 
         .contact-info {
-            margin: 3rem 6rem 0 0;
+            margin: 3rem 4rem 0 0;
         }
 
     }    
@@ -111,6 +108,6 @@
         }
 
         .contact-info {
-            width: 14rem;
+            margin: 3rem 1rem 0 0;
         }
     }    

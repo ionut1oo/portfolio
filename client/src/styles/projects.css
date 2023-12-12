@@ -16,7 +16,7 @@
 .project-card {
     border: 1px solid black;
     width: 21rem;
-    height: 24rem;
+    height: 26rem;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -28,7 +28,7 @@
 }
 
 .project-name {
-    padding: 3rem 0 0.5rem 1rem;
+    padding: 2rem 0 0.5rem 1rem;
     font-weight: 500;
     letter-spacing: 0.7px;
 }
@@ -40,8 +40,8 @@
 }
 
 .project-button {
-    padding: 1rem;
-    margin: 0.6rem 0 0 0.5rem ;
+    padding: 0.9rem;
+    margin: 1rem 0 0 0.8rem ;
     background-color: #5661C3;
     border-radius: 5px;
     color: #050505;

@@ -18,7 +18,7 @@
     grid-template-rows: 20rem 1fr;
     grid-template-columns: repeat(4, auto);
     justify-items: center;
-    width: 65rem;
+    width: 70rem;
     line-height: 1.5;
     letter-spacing: 1px;
 }
@@ -26,7 +26,7 @@
 .card1, .card2, .card3, .card4 {
     border: 1px solid black;
     border-radius: 5px;
-    width: 15rem;
+    width: 16rem;
     height: 16rem;
     background-color: #5661C3;
     padding-top: 1.2rem;
