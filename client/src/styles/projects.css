@@ -83,6 +83,7 @@
 @media screen and (max-width: 65rem) {
     .projects-container {
         padding: 10rem 2rem;
+        margin: 0 auto;
     }
 
     .project-card {
@@ -106,13 +107,16 @@
     }
 
     .project-card {
-        margin: 2rem 2.4rem;
+        margin: 2rem 0;
     }
 
-    @media screen and (max-width: 55rem)  {
+}
+
+    @media screen and (max-width: 35rem)  {
+
         .projects-title {
             font-size: 1.4rem;
         }
     }
 
-}
+    

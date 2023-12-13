@@ -72,8 +72,8 @@
 
 }
 
-@media screen and (max-width: 20em) {
+@media screen and (max-width: 25em) {
     .description {
-        margin: 0 2rem;
+        margin: 0;
     }
 }

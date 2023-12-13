@@ -77,7 +77,6 @@
         width: 25rem; 
     }
 
-
 }
 
     @media screen and (max-width: 35em) {
@@ -87,8 +86,7 @@
         }
 
         .contact-form {
-            width: 23rem; 
-            margin: 0 1.9rem;
+            width: 21rem;
         }
 
         .contact-title { 
@@ -96,7 +94,7 @@
         }
 
         .contact-info {
-            margin: 3rem 4rem 0 0;
+            margin: 3rem 2rem 0 0;
         }
 
     }    

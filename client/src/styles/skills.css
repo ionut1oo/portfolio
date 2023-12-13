@@ -83,7 +83,7 @@ dd {
 @media screen and (max-width: 35rem) {
     .skills-title {
         font-size: 1.4rem;
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
     }
 
     .cards {
@@ -96,4 +96,10 @@ dd {
     justify-items: start;
     }
 
+}
+
+@media screen and (max-width: 25rem) {
+    .cards {
+        margin: 0 -10rem;
+    }
 }
