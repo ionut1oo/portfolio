@@ -111,9 +111,6 @@
         font-size: 22px;
     }
 
-    .business-card p {
-        font-size: 0.9rem;
-    }
 
 }
 
@@ -140,6 +137,10 @@
     .business-card .horiz-card {
         width: 18.6rem;
         margin-left: -0.7rem;
+    }
+
+    .business-card p {
+        font-size: 0.9rem;
     }
 
 }
