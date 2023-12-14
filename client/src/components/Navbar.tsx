@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
 

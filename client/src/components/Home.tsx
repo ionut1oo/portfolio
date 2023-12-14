@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className='home-container'>
+    <div className='home-container' id="home">
       <div className='business-card'>
       <h1 className='role'>Junior Frontend Developer</h1>
       <hr className='horiz-card'/>

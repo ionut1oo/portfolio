@@ -20,6 +20,17 @@
     margin-top: 2rem;
     line-height: 1.5;
     padding-left: 0.9rem;
+    animation: card-showUp 0.5s ease-out;
+}
+
+@keyframes card-showUp {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .business-card .horiz-card {
@@ -67,6 +78,7 @@
         grid-template-rows: 2.5rem;
         margin: auto auto;
     }
+
 
     .business-card .horiz-card {
         width: 21rem;

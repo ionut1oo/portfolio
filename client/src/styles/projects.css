@@ -46,11 +46,16 @@
     border-radius: 5px;
     color: #050505;
     letter-spacing: 0.7px;
-    cursor: pointer;
+
 }
 
 .project-button a {
     text-decoration: none;
+}
+
+.project-button:hover {
+    cursor: pointer;
+    background-color: #5661c3bd;
 }
 
 .project-button:active {
