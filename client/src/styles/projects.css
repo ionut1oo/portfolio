@@ -46,6 +46,7 @@
     border-radius: 5px;
     color: #050505;
     letter-spacing: 0.7px;
+    cursor: pointer;
 }
 
 .project-button a {
@@ -113,10 +114,16 @@
 }
 
     @media screen and (max-width: 35rem)  {
-
+        .projects-container {
+            padding: 10rem 3rem;
+            margin: 0 auto;
+        }
+    
         .projects-title {
             font-size: 1.4rem;
         }
+
+        
     }
 
     

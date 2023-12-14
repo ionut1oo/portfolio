@@ -8,7 +8,7 @@ const Home = () => {
     <div className='home-container'>
       <div className='business-card'>
       <h1 className='role'>Junior Frontend Developer</h1>
-      <hr />
+      <hr className='horiz-card'/>
       <p className='my-name'>Ciornei Ionut</p>
       <p>(+40) 759 478 325</p>
       <p>ciorneiionut94@gmail.com</p>

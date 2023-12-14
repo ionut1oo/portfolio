@@ -14,12 +14,13 @@
 }
 
  @media screen and (max-width: 55rem) {
-    /* .footer-container {
-        width: auto;
+    /*.footer-container {
+        width: 120vw;
     } */
 
     .footer-description {
         text-align: center;
+        margin: 0 2rem;
     }
 }
 

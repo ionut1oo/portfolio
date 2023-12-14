@@ -77,6 +77,10 @@ dd {
         width: 32rem;
         padding: 0 auto;
     }
+
+    dd {
+        font-size: 1rem;
+    }
 }
 
 
