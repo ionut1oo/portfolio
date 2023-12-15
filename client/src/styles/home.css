@@ -20,12 +20,15 @@
     margin-top: 2rem;
     line-height: 1.5;
     padding-left: 0.9rem;
-    animation: card-showUp 0.5s ease-out;
 }
 
-@keyframes card-showUp {
+.role, .horiz-card, .my-name, .phone-number, .mail, .social-contact {
+    animation: text-showUp 0.5s ease-out 1s;
+}
+
+@keyframes text-showUp {
     from {
-        transform: translateY(-100px);
+        transform: translateY(50px);
     }
 
     to {

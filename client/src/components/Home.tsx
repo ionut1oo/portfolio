@@ -8,10 +8,10 @@ const Home = () => {
     <div className='home-container' id="home">
       <div className='business-card'>
       <h1 className='role'>Junior Frontend Developer</h1>
-      <hr className='horiz-card'/>
+      <hr className='horiz-card' />
       <p className='my-name'>Ciornei Ionut</p>
-      <p>(+40) 759 478 325</p>
-      <p>ciorneiionut94@gmail.com</p>
+      <p className='phone-number'>(+40) 759 478 325</p>
+      <p className='mail'>ciorneiionut94@gmail.com</p>
       <div className='social-contact'>
         <Link  to='https://www.linkedin.com/in/ionut-ciornei/' 
         target='_blank'  className='social-icons'>
