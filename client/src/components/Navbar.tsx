@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
-import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+    <header id="/">
       <button
         type="button"
         className="hamburger"
@@ -28,11 +28,23 @@ const Navbar = () => {
         <div id="primary-navigation" 
           className={`nav-link-container ${isVisible ? 'show' : ''}`}
         >
-          <Link to='/home' className="nav-link">Home</Link>
-          <Link to='/about' className="nav-link">About</Link>
-          <Link to='/skills' className="nav-link">Skills</Link>
-          <Link to='/projects' className="nav-link">Projects</Link>
-          <Link to='/contact' className="nav-link">Contact</Link>
+          <LinkScroll to='home' activeClass="active" spy={true} 
+          smooth={true} offset={50} duration={500}  
+          className="nav-link">Home</LinkScroll>
+          <LinkScroll to='about' 
+           activeClass="active" spy={true} 
+           smooth={true} offset={50} duration={500}  
+           className="nav-link">About</LinkScroll>
+          <LinkScroll to='skills' 
+           activeClass="active" spy={true} 
+           smooth={true} offset={50} duration={500} 
+            className="nav-link">Skills</LinkScroll>
+          <LinkScroll to='projects'  activeClass="active" spy={true} 
+          smooth={true} offset={50} duration={500} 
+          className="nav-link">Projects</LinkScroll>
+          <LinkScroll to='contact'  activeClass="active" spy={true} 
+          smooth={true} offset={50} duration={500}  
+          className="nav-link">Contact</LinkScroll>
         </div>
       </nav>
     </header>

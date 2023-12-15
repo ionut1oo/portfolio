@@ -27,11 +27,13 @@
   text-decoration-thickness: 4px;
   text-decoration-color: #e6d87c;
   text-underline-offset: 10px;
+  cursor: pointer;
 }
 
 .nav-link:focus {
   color: #000;
 }
+
 
 .logo {
   width: 6rem;
