@@ -30,7 +30,7 @@ const Navbar = () => {
         >
           <LinkScroll to='home' activeClass="active" spy={true} 
           smooth={true} offset={50} duration={500}  
-          className="nav-link">Home</LinkScroll>
+          className="nav-link focused">Home</LinkScroll>
           <LinkScroll to='about' 
            activeClass="active" spy={true} 
            smooth={true} offset={50} duration={500}  

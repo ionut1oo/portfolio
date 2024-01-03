@@ -168,7 +168,7 @@
     }
 
     .business-card {
-        grid-template-columns: 16rem;
+        grid-template-columns: 18rem;
         overflow: hidden;
         padding: 0.5rem -3rem 0.5rem 0.5rem;
         margin: 0 -2rem;
