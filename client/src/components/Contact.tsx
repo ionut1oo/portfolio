@@ -6,8 +6,8 @@ const Contact= () => {
     return (
         <div className='contact-container' id='contact'>
             <form action="https://formsubmit.co/a9b4085d9d3877c4e9448f77a3f4cc8c"
-             method="POST" className='contact-form'>
-                <h2 className='contact-title'>Contact</h2>
+             method="POST" className='contact-form' target='__blank'>
+                <h2 className='contact-title'>Contact Me</h2>
                 <fieldset>
                      <label htmlFor="name">Name</label>
                      <input id='name' type='text' name='name'/>

@@ -7,6 +7,7 @@ import Contact from './Contact';
 import Skills from './Skills';
 import Main from './Main';
 
+
 const App = () => {
   return (
     <div>
