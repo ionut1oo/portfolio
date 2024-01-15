@@ -10,7 +10,7 @@ const Home = () => {
       <h1 className='role'>Junior Frontend Developer</h1>
       <hr className='horiz-card' />
       <p className='my-name'>Ciornei Ionut</p>
-      <p className='phone-number'>(+40) 759 478 325</p>
+      <p className='phone-number'>(+44) 790 952 9660 </p>
       <p className='mail'>ciorneiionut94@gmail.com</p>
       <div className='social-contact'>
         <Link  to='https://www.linkedin.com/in/ionut-ciornei/' 
