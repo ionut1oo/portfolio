@@ -1,5 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
