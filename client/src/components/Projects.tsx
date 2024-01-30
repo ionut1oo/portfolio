@@ -10,7 +10,7 @@ const Projects = () => {
         <img className="projects-photo" src="imgs/shop-on.png" alt="shop-on" />
         <h3 className="project-name">Shop-On</h3>
         <h4 className="project-description">React, JavaScript, ReduxToolkit, CSS</h4>
-        <Link to="https://ionut1oo.github.io/Shop-On-V2/"  target='_blank' >
+        <Link to="https://shop-on-v2.vercel.app/"  target='_blank' >
           <button className="project-button">Visit Website</button>
         </Link>
       </div>

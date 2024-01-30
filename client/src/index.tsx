@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}> 
-    <BrowserRouter basename='/portfolio'>
+    <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
