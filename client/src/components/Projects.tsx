@@ -18,7 +18,7 @@ const Projects = () => {
       <img className="projects-photo" src="imgs/clover-beauty.png" alt="clover-beauty" />
         <h3 className="project-name">Clover Beauty</h3>
         <h4 className="project-description">React, JavaScript, CSS</h4>
-        <Link to="https://ionut1oo.github.io/Clover__beauty/"  target='_blank' >
+        <Link to="https://clover-beauty.vercel.app/"  target='_blank' >
           <button className="project-button">Visit Website</button>
         </Link>
       </div>
