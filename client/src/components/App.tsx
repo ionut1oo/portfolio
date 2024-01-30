@@ -1,4 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <SpeedInsights />
       <Routes>
         <Route path="/" element={<Main />} /> 
         <Route path="/home" element={<Home />} />
