@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
-    padding: 10rem 12rem;
+    justify-content: space-evenly;
+    /* padding: 10rem 12rem; */
 }
 
 .projects-title {

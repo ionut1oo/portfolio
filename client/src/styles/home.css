@@ -3,7 +3,8 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-items: center;
-    padding: 14rem ;
+    /* padding: 14rem ; */
+    padding-top: 7rem;
 }
 
 .me-photo {
