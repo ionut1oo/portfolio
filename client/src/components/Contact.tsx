@@ -21,7 +21,7 @@ const Contact= () => {
             <div className='contact-info'>
                 <h3 className='info-title'>Contact Info</h3>
                 <p className='info'>Name: Ionut Ciornei</p>
-                <p className='info'>Phone Number: (+44) 790 952 9660</p>
+                <p className='info'>Phone Number: (+44) 746 8311 434</p>
                 <p className='info'>Email: ciorneiionut94@gmail.com</p>
             </div>
        
